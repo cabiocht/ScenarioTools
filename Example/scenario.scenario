@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scenario:Scenario xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:scenario="scenario" aimedDuration="6">
+  <Outcomes Name="FinPotion" Description="Le joueur à réussi a créer une potion" OutcomeStateConnection="//@States.7"/>
+  <States xsi:type="scenario:GameState" Name="SHVisite" Description="Silver hair rend visite aux ours" IsInitialAvailableState="true"/>
+  <States xsi:type="scenario:GameState" Name="BPrepare" Description="Les ours de préparent pour leur balade" IsInitialAvailableState="true"/>
+  <States xsi:type="scenario:GameState" Name="SHCuisine" Description="le joueur est dans la cuisine"/>
+  <States xsi:type="scenario:GameState" Name="BBalade" Description="Les ours sont en balade"/>
+  <States xsi:type="scenario:GameState" Name="SHVengeance"/>
+  <States xsi:type="scenario:GameState" Name="CCottage" Description="Le joueur à choisi d'aller chez les ours au début"/>
+  <States xsi:type="scenario:GameState" Name="CMaison" Description="Le joueur a choisi de rentrer chez lui au début"/>
+  <States xsi:type="scenario:GameState" Name="OPotion" Description="Le joueur à l'objet &quot;Potion&quot;"/>
+  <States xsi:type="scenario:GameState" Name="MPotionLait" Description="Le joueur à commis la bêtise : Mettre sa potion dans le lait des ours"/>
+  <States xsi:type="scenario:GameState" Name="MLait" Description="Le joueur à commis la bêtise : Boire le lait des ours"/>
+  <States xsi:type="scenario:GameState" Name="SHSalon" Description="Le joueur est dans le salon"/>
+  <States xsi:type="scenario:GameState" Name="SHCave" Description="Le joueur est dans la cave"/>
+  <States xsi:type="scenario:GameState" Name="MBois" Description="Le joueur à commis la bêtise : Faire disparaitre le bois des ours"/>
+  <States xsi:type="scenario:GameInput" Name="Cottage" Description="Le joueur veut aller dans la maison des ours"/>
+  <States xsi:type="scenario:GameInput" Name="Maison" Description="Le joueur veut aller dans sa maison"/>
+  <States xsi:type="scenario:GameState" Name="SHMaison" Description="le joueur est chez lui"/>
+  <Choices Description="le joueur choisit entre aller chez lui ou chez les ours">
+    <ChoicePossibility Description="Le joueur veut aller chez les ours" PossibilityEventActionConnection="//@EventsActions.1"/>
+    <ChoicePossibility Description="Le joueur veut aller chez lui" PossibilityEventActionConnection="//@EventsActions.2"/>
+  </Choices>
+  <EventsActions Name="DebutPromenade" Description="Les ours partent en promenade, ce qui met Silver Hair en rogne." minTimeBeforeReached="1" maxTimeBeforeReached="1">
+    <EventActionPrecondition PreconditionStateConnection="//@States.0"/>
+    <EventActionPrecondition PreconditionStateConnection="//@States.1"/>
+    <EventActionEffect EffectStateConnection="//@States.4" Type="MustBeConsumed"/>
+    <EventActionEffect EffectStateConnection="//@States.3" Type="MustBeConsumed"/>
+  </EventsActions>
+  <EventsActions Name="SHCuisineOurs" Description="Le joueur va dans la cuisine des ours" minTimeBeforeReached="2" maxTimeBeforeReached="3">
+    <EventActionPrecondition PreconditionStateConnection="//@States.3" Consumed="false"/>
+    <EventActionPrecondition PreconditionStateConnection="//@States.4" Consumed="false"/>
+    <EventActionPrecondition PreconditionStateConnection="//@States.13"/>
+    <EventActionEffect EffectStateConnection="//@States.2" Type="MustBeConsumed"/>
+    <EventActionEffect EffectStateConnection="//@States.5" Type="Infinite"/>
+  </EventsActions>
+  <EventsActions Name="SHMaison" Description="Le joueur va dans sa maison" minTimeBeforeReached="1" maxTimeBeforeReached="2">
+    <EventActionPrecondition PreconditionStateConnection="//@States.3"/>
+    <EventActionPrecondition PreconditionStateConnection="//@States.4"/>
+    <EventActionPrecondition PreconditionStateConnection="//@States.14"/>
+    <EventActionEffect EffectStateConnection="//@States.6" Type="Infinite"/>
+    <EventActionEffect EffectStateConnection="//@States.15" Type="MustBeConsumed"/>
+  </EventsActions>
+  <EventsActions Name="PreparerPotion" Description="Le joueur prépare une potion" minTimeBeforeReached="3" maxTimeBeforeReached="4">
+    <EventActionPrecondition PreconditionStateConnection="//@States.15" Consumed="false"/>
+    <EventActionEffect EffectStateConnection="//@States.7"/>
+  </EventsActions>
+  <EventsActions Name="MBoireLait" Description="Le joueur boit le lait des ours" minTimeBeforeReached="1" maxTimeBeforeReached="2">
+    <EventActionPrecondition PreconditionStateConnection="//@States.2" Consumed="false"/>
+    <EventActionEffect EffectStateConnection="//@States.9" Type="Infinite"/>
+  </EventsActions>
+  <EventsActions Name="MPotionLait" Description="Le joueur met sa potion dans le lait des ours" minTimeBeforeReached="1" maxTimeBeforeReached="1">
+    <EventActionPrecondition PreconditionStateConnection="//@States.2" Consumed="false"/>
+    <EventActionPrecondition PreconditionStateConnection="//@States.7"/>
+    <EventActionEffect EffectStateConnection="//@States.8" Type="Infinite"/>
+  </EventsActions>
+  <EventsActions Name="MBois" Description="Le joueur fait disparaitre le bois des ours" minTimeBeforeReached="2" maxTimeBeforeReached="4">
+    <EventActionPrecondition PreconditionStateConnection="//@States.10" Consumed="false"/>
+    <EventActionEffect EffectStateConnection="//@States.12" Type="Infinite"/>
+  </EventsActions>
+  <EventsActions Name="SHSalon" Description="Silver hair va dans le salon" EventActionPriorityOrder="10" minTimeBeforeReached="2" maxTimeBeforeReached="3">
+    <EventActionPrecondition PreconditionStateConnection="//@States.9"/>
+    <EventActionPrecondition PreconditionStateConnection="//@States.2"/>
+    <EventActionEffect EffectStateConnection="//@States.10"/>
+  </EventsActions>
+  <EventsActions Name="SHCave" Description="Silver hair va dans la cave">
+    <EventActionPrecondition PreconditionStateConnection="//@States.9"/>
+    <EventActionPrecondition PreconditionStateConnection="//@States.2"/>
+    <EventActionEffect EffectStateConnection="//@States.11"/>
+  </EventsActions>
+</scenario:Scenario>

@@ -79,3 +79,19 @@ Choices
   Un Choix représente un choix du joueur entre 2 ou plusieurs actions à faire, une fois choisi l'ensemble des actions du choix sont       consommés.
   
   Pour créer un choix, il faut sélectionner Choice dans la palette d'édition puis le placer dans la zone blanche, il est alors possible d'éditer sa description dans l'onglet "Properties" d'Obeo, un choix est constitué d'un ensemble de possibilités, créés grâce à l'outil "possibility", ensuite chaque possibilité doit être raccrochée à un EventAction grâce à l'outil ChoicePossibilityConnection ou en sélectionnant directement l'EventAction en cliquant sur "..." à côté de la propriété "Possibility Event Action Connection" de l'onglet "Properties" d'Obeo.
+  
+  ### Exemple
+  
+  Un exemple de scénario édité est présent dans le dossier "Example", il définit le début d'une histoire interactive de Silver Hair, il y a un ensemble d'états permettant de représenter les différents instants présents à chaque étape des discours possibles. Un ensemble d'actions, accompagné d'un choix fait par l'utilisateur, la seule fin souhaitée est celle ou le joueur à créé une potion. Ainsi le graphe de sortie donné dans l'exemple montre bien que la seule branche réussie est cella ou le joueur à créé une potion.
+  
+  
+  ## Utiliser le module d'analyse
+  
+  Le module d'analyse permet d'analyser un scénario créé dans l'éditeur afin de vérifier sa validité et qu'il correspond bien à ce que l'on veut faire.
+  ### Prerequis
+  Afin d'utiliser le module d'analyse, il est nécéssaire d'installer le logiciel GraphViz permettant de générer les graphes.
+  ### Utilisation
+  Afin d'analyser un scénario, il faut créer un dossier dans lequel il va falloir placer les différents fichiers présents dans le dossier "AnalyzerExecutable". Une fois cela fait, il faut éditer le fichier .bat en mettant dans les parenthèses le chemin vers l'exécutable de GraphViz.
+  
+  Il est ensuite nécéssaire d'exporter le scénario depuis Obeo, pour cela, faites un clic droit sur le fichier ".scenario" créé dans l'éditeur, et faites exporter, placez le dans le dossier créé précédemment. Renommez le scénario : "scenario". Puis lancer le .bat, si le chemin vers GraphViz à bien été spécifié, alors un dossier "out" va être créé comportant les différents fichiers permettant l'analyse de validité du scénario.
+  

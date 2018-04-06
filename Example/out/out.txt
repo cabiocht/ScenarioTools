@@ -1,0 +1,52 @@
+Il y a 0 état(s) n'aparaissant dans aucun EventAction :
+
+Il y a 1 discours réussis, 2 discours ratés pour un total de 3 discours, soit 33% de réussite
+
+Liste des discours réussis : 
+
+	Branche 1 : 
+
+		Fin obtenue : 
+			Le joueur a une potion : null
+
+		init->DebutPromenade->SHMaison->PreparerPotion
+
+		Etats finaux disponibles : 
+			CMaison SHMaison OPotion 
+
+		Durée estimée de la branche : 
+			Min : 5
+			Max : 8
+
+Liste des discours ratés : 
+
+	Branche 2 : 
+
+		Raison(s) de l'échec :
+			Ce discours n'abouti à aucune fin
+			Ce discours ne respecte pas la contrainte de temps
+
+		init->DebutPromenade->SHCuisineOurs->MBoireLait->SHSalon->MBois
+
+		Etats finaux disponibles : 
+			SHVengeance BBalade CCottage MLait SHSalon MBois 
+
+		Durée estimée de la branche : 
+			Min : 11
+			Max : 17
+
+	Branche 3 : 
+
+		Raison(s) de l'échec :
+			Ce discours n'abouti à aucune fin
+			Ce discours ne respecte pas la contrainte de temps
+
+		init->DebutPromenade->SHCuisineOurs->MBoireLait->SHCave
+
+		Etats finaux disponibles : 
+			SHVengeance BBalade CCottage MLait SHCave 
+
+		Durée estimée de la branche : 
+			Min : 7
+			Max : 10
+

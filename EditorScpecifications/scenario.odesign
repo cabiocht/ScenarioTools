@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/diagram/description/tool/1.1.0" xmlns:tool_1="http://www.eclipse.org/sirius/description/tool/1.1.0" name="scenario" version="12.0.0.2017041100">
+  <ownedViewpoints name="scenario" label="Scenario Viewport" modelFileExtension="scenario">
+    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="GameStates" domainClass="scenario::Scenario" enablePopupBars="true">
+      <metamodel href="file:/D:/workspace/ScenarioEditor/model/scenario.ecore#/"/>
+      <defaultLayer name="GameStates">
+        <nodeMappings name="GameStates" deletionDescription="//@ownedViewpoints[name='scenario']/@ownedRepresentations[name='GameStates']/@defaultLayer/@toolSections.0/@ownedTools[name='Delete%20State']" domainClass="scenario::GameState">
+          <style xsi:type="style:SquareDescription" showIcon="false" labelExpression="[Name/]" tooltipExpression="[Description/]" labelPosition="node" width="7" height="7">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+          </style>
+        </nodeMappings>
+        <toolSections name="States">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="State" nodeMappings="//@ownedViewpoints[name='scenario']/@ownedRepresentations[name='GameStates']/@defaultLayer/@nodeMappings[name='GameStates']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[container/]">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="scenario::GameState" referenceName="States" variableName="gameState">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="Name" valueExpression="['New Game State'/]"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:DeleteElementDescription" name="Delete State">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <containerView name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[element/]">
+                <subModelOperations xsi:type="tool_1:RemoveElement"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+      </defaultLayer>
+    </ownedRepresentations>
+    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="GameInputs" domainClass="scenario::Scenario" enablePopupBars="true">
+      <metamodel href="file:/D:/workspace/ScenarioEditor/model/scenario.ecore#/"/>
+      <defaultLayer name="Default">
+        <nodeMappings name="GameInput" deletionDescription="//@ownedViewpoints[name='scenario']/@ownedRepresentations[name='GameInputs']/@defaultLayer/@toolSections.0/@ownedTools[name='Delete%20State']" domainClass="scenario::GameInput">
+          <style xsi:type="style:SquareDescription" showIcon="false" labelExpression="[Name/]" tooltipExpression="[Description/]" labelPosition="node" width="7" height="7">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='yellow']"/>
+          </style>
+        </nodeMappings>
+        <toolSections name="States">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="State" nodeMappings="//@ownedViewpoints[name='scenario']/@ownedRepresentations[name='GameInputs']/@defaultLayer/@nodeMappings[name='GameInput']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[container/]">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="scenario::GameInput" referenceName="States">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="Name" valueExpression="['New Game Input'/]"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:DeleteElementDescription" name="Delete State">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <containerView name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[element/]">
+                <subModelOperations xsi:type="tool_1:RemoveElement"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+      </defaultLayer>
+    </ownedRepresentations>
+    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="GMInputs" label="GameMasterInputs" domainClass="scenario::Scenario" enablePopupBars="true">
+      <metamodel href="file:/D:/workspace/ScenarioEditor/model/scenario.ecore#/"/>
+      <defaultLayer name="Default">
+        <nodeMappings name="GMInput" label="GameMasterInput" deletionDescription="//@ownedViewpoints[name='scenario']/@ownedRepresentations[name='GMInputs']/@defaultLayer/@toolSections.0/@ownedTools[name='Delete%20State']" domainClass="scenario::GMInput">
+          <style xsi:type="style:SquareDescription" showIcon="false" labelExpression="[Name/]" tooltipExpression="[Description/]" labelPosition="node" width="7" height="7">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='blue']"/>
+          </style>
+        </nodeMappings>
+        <toolSections name="States">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="State" nodeMappings="//@ownedViewpoints[name='scenario']/@ownedRepresentations[name='GMInputs']/@defaultLayer/@nodeMappings[name='GMInput']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[container/]">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="scenario::GMInput" referenceName="States">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="Name" valueExpression="['New GM Input'/]"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:DeleteElementDescription" name="Delete State">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <containerView name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[element/]">
+                <subModelOperations xsi:type="tool_1:RemoveElement"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+      </defaultLayer>
+    </ownedRepresentations>
+    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="Outcomes" domainClass="scenario::Scenario" enablePopupBars="true">
+      <metamodel href="file:/D:/workspace/ScenarioEditor/model/scenario.ecore#/"/>
+      <defaultLayer name="Default">
+        <nodeMappings name="outcome" domainClass="scenario::Outcome">
+          <style xsi:type="style:SquareDescription" borderSizeComputationExpression="3" showIcon="false" labelExpression="[Name/]" tooltipExpression="[Description/]" labelPosition="node" resizeKind="NSEW" width="7" height="7">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='blue']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="state" semanticCandidatesExpression="[self.Outcomes.OutcomeStateConnection/]" domainClass="scenario::State">
+          <style xsi:type="style:SquareDescription" labelExpression="[Name/]" tooltipExpression="[Description/]" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+          </style>
+        </nodeMappings>
+        <edgeMappings name="outcomeStateConnection" sourceMapping="//@ownedViewpoints[name='scenario']/@ownedRepresentations[name='Outcomes']/@defaultLayer/@nodeMappings[name='outcome']" targetMapping="//@ownedViewpoints[name='scenario']/@ownedRepresentations[name='Outcomes']/@defaultLayer/@nodeMappings[name='state']" targetFinderExpression="[OutcomeStateConnection/]">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <toolSections name="Outcomes">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="outcome" nodeMappings="//@ownedViewpoints[name='scenario']/@ownedRepresentations[name='Outcomes']/@defaultLayer/@nodeMappings[name='outcome']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[container/]">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="scenario::Outcome" referenceName="Outcomes">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="Name" valueExpression="['New Outcome'/]"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="OutcomeStateConnection" label="OutcomeState connection" edgeMappings="//@ownedViewpoints[name='scenario']/@ownedRepresentations[name='Outcomes']/@defaultLayer/@edgeMappings[name='outcomeStateConnection']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:SetValue" featureName="OutcomeStateConnection" valueExpression="[target/]"/>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+      </defaultLayer>
+    </ownedRepresentations>
+    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="EventsActions" domainClass="scenario::Scenario" enablePopupBars="true">
+      <metamodel href="file:/D:/workspace/ScenarioEditor/model/scenario.ecore#/"/>
+      <defaultLayer name="Default">
+        <containerMappings name="EventAction" deletionDescription="//@ownedViewpoints[name='scenario']/@ownedRepresentations[name='EventsActions']/@defaultLayer/@toolSections.0/@ownedTools[name='Delete%20EventAction']" domainClass="scenario::EventAction">
+          <subNodeMappings name="Precondition" semanticCandidatesExpression="[EventActionPrecondition/]" domainClass="scenario::Precondition">
+            <style xsi:type="style:SquareDescription" showIcon="false" labelExpression="aql:if not(self.Exists) then self.PreconditionStateConnection.Name + ' doesn\'t exist' else self.PreconditionStateConnection.Name endif" tooltipExpression="[thisEObject.PreconditionStateConnection.Description/]" labelPosition="node" resizeKind="NSEW" width="10" height="8">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='green']"/>
+            </style>
+          </subNodeMappings>
+          <subNodeMappings name="Effects" semanticCandidatesExpression="[EventActionEffect/]" domainClass="scenario::Effect">
+            <style xsi:type="style:EllipseNodeDescription" showIcon="false" labelExpression="aql:if self.Type = scenario::AtomType::Infinite then '∞ ' + self.EffectStateConnection.Name else if self.Type = scenario::AtomType::MustBeConsumed then '! ' + self.EffectStateConnection.Name else self.EffectStateConnection.Name endif endif" tooltipExpression="[thisEObject.EffectStateConnection.Description/]" labelPosition="node" resizeKind="NSEW" horizontalDiameterComputationExpression="8" verticalDiameterComputationExpression="8">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='blue']"/>
+            </style>
+          </subNodeMappings>
+          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" showIcon="false" labelExpression="[Name/]">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+          </style>
+        </containerMappings>
+        <toolSections name="EventsActions">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="eventAction" containerMappings="//@ownedViewpoints[name='scenario']/@ownedRepresentations[name='EventsActions']/@defaultLayer/@containerMappings[name='EventAction']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[container/]">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="scenario::EventAction" referenceName="EventsActions" variableName="event">
+                  <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[event/]">
+                    <subModelOperations xsi:type="tool_1:SetValue" featureName="Name" valueExpression="['New EventAction'/]"/>
+                  </subModelOperations>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:DeleteElementDescription" name="Delete EventAction">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <containerView name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[thisEObject.EventActionPrecondition/]">
+                <subModelOperations xsi:type="tool_1:RemoveElement"/>
+                <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[element.EventActionEffect/]">
+                  <subModelOperations xsi:type="tool_1:RemoveElement"/>
+                  <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[element/]">
+                    <subModelOperations xsi:type="tool_1:RemoveElement"/>
+                  </subModelOperations>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="Precondition" nodeMappings="//@ownedViewpoints[name='scenario']/@ownedRepresentations[name='EventsActions']/@defaultLayer/@containerMappings[name='EventAction']/@subNodeMappings[name='Precondition']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[container/]">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="scenario::Precondition" referenceName="EventActionPrecondition"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="Effect" nodeMappings="//@ownedViewpoints[name='scenario']/@ownedRepresentations[name='EventsActions']/@defaultLayer/@containerMappings[name='EventAction']/@subNodeMappings[name='Effects']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[container/]">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="scenario::Effect" referenceName="EventActionEffect"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+      </defaultLayer>
+    </ownedRepresentations>
+    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="Choices" domainClass="scenario::Scenario" enablePopupBars="true">
+      <metamodel href="file:/D:/workspace/ScenarioEditor/model/scenario.ecore#/"/>
+      <defaultLayer name="Default">
+        <nodeMappings name="action" deletionDescription="//@ownedViewpoints[name='scenario']/@ownedRepresentations[name='Choices']/@defaultLayer/@toolSections.0/@ownedTools[name='Delete%20Choice']" semanticCandidatesExpression="[EventsActions/]" domainClass="scenario::EventAction">
+          <style xsi:type="style:SquareDescription" borderLineStyle="dash" showIcon="false" labelExpression="[Name/]" tooltipExpression="[Description/]" labelPosition="node" width="5" height="5">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+          </style>
+        </nodeMappings>
+        <edgeMappings name="choicePossibilityConnection" label="Choice Possibility Connection" sourceMapping="//@ownedViewpoints[name='scenario']/@ownedRepresentations[name='Choices']/@defaultLayer/@containerMappings[name='choice']/@subNodeMappings[name='possibility']" targetMapping="//@ownedViewpoints[name='scenario']/@ownedRepresentations[name='Choices']/@defaultLayer/@nodeMappings[name='action']" targetFinderExpression="[thisEObject.PossibilityEventActionConnection/]">
+          <style targetArrow="NoDecoration" sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <containerMappings name="choice" domainClass="scenario::Choice">
+          <subNodeMappings name="possibility" deletionDescription="//@ownedViewpoints[name='scenario']/@ownedRepresentations[name='Choices']/@defaultLayer/@toolSections.0/@ownedTools[name='Delete%20Possibility']" semanticCandidatesExpression="[thisEObject.ChoicePossibility/]" domainClass="scenario::Possibility">
+            <style xsi:type="style:SquareDescription" showIcon="false" labelExpression="" tooltipExpression="[Description/]" labelPosition="node" width="5" height="5">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            </style>
+          </subNodeMappings>
+          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" showIcon="false" labelExpression="[Description/]" widthComputationExpression="15" heightComputationExpression="7">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+          </style>
+        </containerMappings>
+        <toolSections name="Choice">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="Choice" containerMappings="//@ownedViewpoints[name='scenario']/@ownedRepresentations[name='Choices']/@defaultLayer/@containerMappings[name='choice']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[container/]">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="scenario::Choice" referenceName="Choices" variableName="choice">
+                  <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[choice/]">
+                    <subModelOperations xsi:type="tool_1:CreateInstance" typeName="scenario::Possibility" referenceName="ChoicePossibility" variableName="possibility1"/>
+                    <subModelOperations xsi:type="tool_1:CreateInstance" typeName="scenario::Possibility" referenceName="ChoicePossibility" variableName="possibility2"/>
+                    <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[choice/]">
+                      <subModelOperations xsi:type="tool_1:SetValue" featureName="ChoicePossibility" valueExpression="[possibility1/]"/>
+                      <subModelOperations xsi:type="tool_1:SetValue" featureName="ChoicePossibility" valueExpression="[possibility2/]"/>
+                    </subModelOperations>
+                    <subModelOperations xsi:type="tool_1:SetValue" featureName="Description" valueExpression="['New Choice'/]"/>
+                  </subModelOperations>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:DeleteElementDescription" name="Delete Possibility">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <containerView name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:RemoveElement"/>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:DeleteElementDescription" name="Delete Choice">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <containerView name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:RemoveElement"/>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="PossibilityChoiceConnection" label="Choice Possibility Connection" edgeMappings="//@ownedViewpoints[name='scenario']/@ownedRepresentations[name='Choices']/@defaultLayer/@edgeMappings[name='choicePossibilityConnection']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[source/]">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="PossibilityEventActionConnection" valueExpression="[target/]"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="possibility" nodeMappings="//@ownedViewpoints[name='scenario']/@ownedRepresentations[name='Choices']/@defaultLayer/@containerMappings[name='choice']/@subNodeMappings[name='possibility']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[container/]">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="scenario::Possibility" referenceName="ChoicePossibility"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+      </defaultLayer>
+    </ownedRepresentations>
+    <ownedJavaExtensions qualifiedClassName="ScenarioEditor.project.design.Services"/>
+  </ownedViewpoints>
+</description:Group>

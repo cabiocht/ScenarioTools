@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scenario:Scenario xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:scenario="scenario">
+  <States xsi:type="scenario:GameState" Name="SHIntro" Description="Silver hair est a la situation initiale" IsInitialAvailableState="true"/>
+  <States xsi:type="scenario:GameState" Name="SHMaison" Description="Silver hair est chez elle"/>
+  <States xsi:type="scenario:GameState" Name="SHCuisine" Description="Silver hair est dans la cuisine des ours"/>
+  <States xsi:type="scenario:GameState" Name="SHSalon" Description="Silver hair est dans le salon des ours"/>
+  <States xsi:type="scenario:GameState" Name="SHCave" Description="Silver hair est dans la cave des ours"/>
+  <States xsi:type="scenario:GameState" Name="SHGrenier" Description="Silver hair est dans le grenier des ours"/>
+  <States xsi:type="scenario:GameState" Name="SHJardin" Description="Silver hair est dans le jardin des ours"/>
+  <States xsi:type="scenario:GameState" Name="SHChambre" Description="Silver hair est dans la chambre des ours"/>
+  <States xsi:type="scenario:GameState" Name="BPrepare" Description="Les ours se préparent à partir" IsInitialAvailableState="true"/>
+  <States xsi:type="scenario:GameState" Name="BBalade" Description="Les ours sont en balade"/>
+  <States xsi:type="scenario:GameInput" Name="MaisonSH" Description="Le joueur va dans la maison de silver hair"/>
+  <States xsi:type="scenario:GameInput" Name="InitCuisineB" Description="Le joueur va dans la cuisine des ours"/>
+  <States xsi:type="scenario:GameInput" Name="CuisineSalonB" Description="Le joueur va de la cuisine au salon des ours"/>
+  <States xsi:type="scenario:GameInput" Name="CuisineCaveB" Description="Le joueur va de la cuisine à la cave des ours"/>
+  <States xsi:type="scenario:GameInput" Name="JardinB" Description="Le joueur va dans le jardin des ours"/>
+  <States xsi:type="scenario:GameInput" Name="CuisineChambreB" Description="Le joueur va de la cuisine à la chambre"/>
+  <States xsi:type="scenario:GameInput" Name="CuisineGrenierB" Description="Le joueur va de la cuisine au grenier"/>
+  <States xsi:type="scenario:GameState" Name="MLait" Description="Silver hair a bu l elait"/>
+  <States xsi:type="scenario:GameState" Name="MChaises" Description="Silver hair à cassé les chaises"/>
+  <States xsi:type="scenario:GameState" Name="MImages" Description="Silver hair à arraché les images"/>
+  <States xsi:type="scenario:GameState" Name="MBordel" Description="Silver hair à mis la chambre des ours en bordel"/>
+  <States xsi:type="scenario:GameState" Name="MPotionLait" Description="Silver hair à mis sa potion dans le lait des ours"/>
+  <States xsi:type="scenario:GameState" Name="MBaies" Description="Silver hair à mangé les baies des ours"/>
+  <States xsi:type="scenario:GameState" Name="MSaliCouettes" Description="Silver hair à sali les couettes des ours"/>
+  <States xsi:type="scenario:GameState" Name="MPotionSoupe" Description="Silver hair à mis sa potion dans la soupe des ours"/>
+  <States xsi:type="scenario:GameState" Name="MPorridge" Description="Silver hair à mangé le porridge des ours"/>
+  <States xsi:type="scenario:GameState" Name="OPotion" Description="Silver hair à une potion"/>
+  <States xsi:type="scenario:GameState" Name="MBois" Description="Silver hair enlève le bois du salon"/>
+  <States xsi:type="scenario:GameState" Name="OInsectes" Description="Silver hair à des insectes"/>
+  <States xsi:type="scenario:GameState" Name="MInsectesLait" Description="Silver hair à mis des insectes dans le lait des ours"/>
+  <States xsi:type="scenario:GameState" Name="BRevenu" Description="Les ours ont fini leur balade et sont de retour"/>
+  <States xsi:type="scenario:GameInput" Name="CPlacard" Description="Silver hair se cache dans le placard"/>
+  <States xsi:type="scenario:GameInput" Name="CCouettes" Description="Silver hair se cache sous les couettes"/>
+  <States xsi:type="scenario:GameInput" Name="EToit" Description="Silver hair s'échappe par le toit"/>
+  <States xsi:type="scenario:GameInput" Name="CPorte" Description="Silver hair se cache derrière la porte"/>
+  <States xsi:type="scenario:GameInput" Name="EFenetre" Description="Silver hair s'achappe par la fenêtre"/>
+  <States xsi:type="scenario:GameState" Name="SHPlacard" Description="Silver hair est dans le placard"/>
+  <States xsi:type="scenario:GameState" Name="SHCouettes" Description="Silver hair est sous les couettes"/>
+  <States xsi:type="scenario:GameState" Name="SHPorte" Description="Silver hair est derrière la porte"/>
+  <States xsi:type="scenario:GameState" Name="SHToit" Description="Silver hair s'échappe par le toit"/>
+  <States xsi:type="scenario:GameState" Name="SHFenetre" Description="Silver hair s'échappe par la fenêtre"/>
+  <States xsi:type="scenario:GameInput" Name="MaisonCuisineB" Description="Le joueur va de la maison a la cuisine"/>
+  <States xsi:type="scenario:GameInput" Name="SalonCuisineB" Description="Le joueur va du salon à la cuisine"/>
+  <States xsi:type="scenario:GameInput" Name="CaveCuisineB" Description="Le joueur va de la cave à la cuisine"/>
+  <States xsi:type="scenario:GameInput" Name="JardinCaveB" Description="Le joueur va du jardin à la cave"/>
+  <States xsi:type="scenario:GameInput" Name="GrenierSalonB" Description="Le joueur va du grenier au salon"/>
+  <States xsi:type="scenario:GameInput" Name="SalonGrenierB" Description="Le joueur va du salon au grenier"/>
+  <States xsi:type="scenario:GameInput" Name="JardinChambreB" Description="Le joueur va du jardin à la chambre"/>
+  <States xsi:type="scenario:GameInput" Name="BoireLait" Description="Le joueur veut boire le lair"/>
+  <States xsi:type="scenario:GameInput" Name="EssayerChaises" Description="Le joueur veut essayer les chaises"/>
+  <States xsi:type="scenario:GameInput" Name="ArracherImages" Description="Le joueur veut arracher les images"/>
+  <States xsi:type="scenario:GameInput" Name="BordelChambre" Description="Le joueur veut mettre la chambre en bordel"/>
+  <States xsi:type="scenario:GameInput" Name="PotionLait" Description="Le joueur veut mettre sa potion dans le lait"/>
+  <States xsi:type="scenario:GameInput" Name="PotionSoupe" Description="Le joueur veut mettre sa potion dans la soupe"/>
+  <States xsi:type="scenario:GameInput" Name="MangerPorridge" Description="le joueur veut manger le porridge"/>
+  <States xsi:type="scenario:GameInput" Name="DispairaitreBois" Description="Le joueur veut faire disparaitre le bois"/>
+  <States xsi:type="scenario:GameInput" Name="InsectesLait" Description="Le joueur veut mettre des insectes dans le lait"/>
+  <States xsi:type="scenario:GameInput" Name="SalirCouettes" Description="Le joueur veut salir les couettes"/>
+  <States xsi:type="scenario:GameInput" Name="GrenierCuisineB" Description="Le joueur va du grenier à la cuisine"/>
+  <Choices Description="DestinationInitiale">
+    <ChoicePossibility PossibilityEventActionConnection="//@EventsActions.1"/>
+  </Choices>
+  <Choices Description="Cachette">
+    <ChoicePossibility PossibilityEventActionConnection="//@EventsActions.19"/>
+    <ChoicePossibility PossibilityEventActionConnection="//@EventsActions.20"/>
+  </Choices>
+  <EventsActions Name="SHVisit" Description="Silver hair rend visite aux ours" minTimeBeforeReached="3" maxTimeBeforeReached="5">
+    <EventActionPrecondition PreconditionStateConnection="//@States.0"/>
+    <EventActionPrecondition PreconditionStateConnection="//@States.8"/>
+    <EventActionEffect EffectStateConnection="//@States.9"/>
+  </EventsActions>
+    <EventsActions Name="MEatPorridge" Description="Silver hair mange le porridge des ours">
+    <EventActionPrecondition PreconditionStateConnection="//@States.2" Consumed="false"/>
+    <EventActionPrecondition PreconditionStateConnection="//@States.54"/>
+    <EventActionEffect EffectStateConnection="//@States.25"/>
+  </EventsActions>
+  <EventsActions Name="SHInitKitchen" Description="Silver hair va dans de la position initiale à la cuisine">
+    <EventActionPrecondition PreconditionStateConnection="//@States.9" Consumed="false"/>
+    <EventActionPrecondition PreconditionStateConnection="//@States.11"/>
+    <EventActionEffect EffectStateConnection="//@States.2"/>
+  </EventsActions>
+  <EventsActions Name="SHMaisonCuisine" Description="Silver hair va de sa maison à la cuisine" infinite="true">
+    <EventActionPrecondition PreconditionStateConnection="//@States.1"/>
+    <EventActionPrecondition PreconditionStateConnection="//@States.41" Consumed="false"/>
+    <EventActionEffect EffectStateConnection="//@States.2"/>
+  </EventsActions>
+  <EventsActions Name="SHSalonCuisine" Description="Silver hair va du salon à la cuisine" infinite="true">
+    <EventActionPrecondition PreconditionStateConnection="//@States.3"/>
+    <EventActionPrecondition PreconditionStateConnection="//@States.42" Consumed="false"/>
+    <EventActionEffect EffectStateConnection="//@States.2"/>
+  </EventsActions>
+  <EventsActions Name="SHCuisineCave" Description="Silver hair va de la cuisine à la cave" infinite="true">
+    <EventActionPrecondition PreconditionStateConnection="//@States.2"/>
+    <EventActionPrecondition PreconditionStateConnection="//@States.13" Consumed="false"/>
+    <EventActionEffect EffectStateConnection="//@States.4"/>
+  </EventsActions>
+  <EventsActions Name="SHCaveCuisine" Description="Silver hair va de la cave à la cuisine" infinite="true">
+    <EventActionPrecondition PreconditionStateConnection="//@States.4"/>
+    <EventActionPrecondition PreconditionStateConnection="//@States.43" Consumed="false"/>
+    <EventActionEffect EffectStateConnection="//@States.2"/>
+  </EventsActions>
+  <EventsActions Name="SHCaveJardin" Description="Silver hair va de la cave au jardin" infinite="true">
+    <EventActionPrecondition PreconditionStateConnection="//@States.4"/>
+    <EventActionPrecondition PreconditionStateConnection="//@States.14" Consumed="false"/>
+    <EventActionEffect EffectStateConnection="//@States.6"/>
+  </EventsActions>
+  <EventsActions Name="SHJardinCave" Description="Silver hair va de la cave au jardin" infinite="true">
+    <EventActionPrecondition PreconditionStateConnection="//@States.6"/>
+    <EventActionPrecondition PreconditionStateConnection="//@States.44"/>
+    <EventActionEffect EffectStateConnection="//@States.4"/>
+  </EventsActions>
+  <EventsActions Name="SHJardinChambre" Description="Silver hair va du jardin à la chambre" infinite="true">
+    <EventActionPrecondition PreconditionStateConnection="//@States.6"/>
+    <EventActionPrecondition PreconditionStateConnection="//@States.47" Consumed="false"/>
+    <EventActionEffect EffectStateConnection="//@States.7"/>
+  </EventsActions>
+  <EventsActions Name="MDrinkMilk" Description="Silver hair boit le lait">
+    <EventActionPrecondition PreconditionStateConnection="//@States.2" Consumed="false"/>
+    <EventActionPrecondition PreconditionStateConnection="//@States.48"/>
+    <EventActionEffect EffectStateConnection="//@States.17"/>
+  </EventsActions>
+  <EventsActions Name="MPotionLait" Description="Silver hair met sa potion dans le lait des ours">
+    <EventActionPrecondition PreconditionStateConnection="//@States.2" Consumed="false"/>
+    <EventActionPrecondition PreconditionStateConnection="//@States.26"/>
+    <EventActionPrecondition PreconditionStateConnection="//@States.52"/>
+    <EventActionEffect EffectStateConnection="//@States.21"/>
+  </EventsActions>
+  <EventsActions Name="MPotionSoupe" Description="Silver hair met sa potion dans la soupe des ours">
+    <EventActionPrecondition PreconditionStateConnection="//@States.2" Consumed="false"/>
+    <EventActionPrecondition PreconditionStateConnection="//@States.26"/>
+    <EventActionPrecondition PreconditionStateConnection="//@States.53"/>
+    <EventActionEffect EffectStateConnection="//@States.24"/>
+  </EventsActions>
+  <EventsActions Name="SHGrenierCuisine" Description="Silver hair va du grenier à la cuisine" infinite="true">
+    <EventActionPrecondition PreconditionStateConnection="//@States.5"/>
+    <EventActionPrecondition PreconditionStateConnection="//@States.58" Consumed="false"/>
+    <EventActionEffect EffectStateConnection="//@States.2"/>
+  </EventsActions>
+  <EventsActions Name="SHCuisineGrenier" Description="Silver hair va de la cuisine au grenier" infinite="true">
+    <EventActionPrecondition PreconditionStateConnection="//@States.2"/>
+    <EventActionPrecondition PreconditionStateConnection="//@States.16" Consumed="false"/>
+    <EventActionEffect EffectStateConnection="//@States.5"/>
+  </EventsActions>
+  <EventsActions Name="SHKitchenBedroom" Description="Silver hair va de la cuisine à la chambre" infinite="true">
+    <EventActionPrecondition PreconditionStateConnection="//@States.2"/>
+    <EventActionPrecondition PreconditionStateConnection="//@States.15" Consumed="false"/>
+    <EventActionEffect EffectStateConnection="//@States.7"/>
+  </EventsActions>
+  <EventsActions Name="MDisparaitreBois" Description="Silver hair fait disparaitre le bois">
+    <EventActionPrecondition PreconditionStateConnection="//@States.3" Consumed="false"/>
+    <EventActionPrecondition PreconditionStateConnection="//@States.55"/>
+    <EventActionEffect EffectStateConnection="//@States.27"/>
+  </EventsActions>
+  <EventsActions Name="MInsectesLait" Description="Silver hair met des insectes dans le lait des ours">
+    <EventActionPrecondition PreconditionStateConnection="//@States.2" Consumed="false"/>
+    <EventActionPrecondition PreconditionStateConnection="//@States.28"/>
+    <EventActionPrecondition PreconditionStateConnection="//@States.56"/>
+    <EventActionEffect EffectStateConnection="//@States.29"/>
+  </EventsActions>
+  <EventsActions Name="BearsReturn" Description="Les ours reviennent de leur balade">
+    <EventActionPrecondition PreconditionStateConnection="//@States.9"/>
+    <EventActionPrecondition PreconditionStateConnection="//@States.7" Consumed="false"/>
+    <EventActionEffect EffectStateConnection="//@States.30"/>
+  </EventsActions>
+  <EventsActions Name="MSoilBlanket" Description="Silver hair s'essuie dans les couettes ">
+    <EventActionPrecondition PreconditionStateConnection="//@States.9" Consumed="false"/>
+    <EventActionPrecondition PreconditionStateConnection="//@States.7" Consumed="false"/>
+    <EventActionPrecondition PreconditionStateConnection="//@States.57"/>
+    <EventActionEffect EffectStateConnection="//@States.23"/>
+  </EventsActions>
+  <EventsActions Name="SHHideCloset" Description="Silver hair se cache dans le placard">
+    <EventActionPrecondition PreconditionStateConnection="//@States.7" Consumed="false"/>
+    <EventActionPrecondition PreconditionStateConnection="//@States.30" Consumed="false"/>
+    <EventActionPrecondition PreconditionStateConnection="//@States.31"/>
+    <EventActionEffect EffectStateConnection="//@States.36"/>
+  </EventsActions>
+  <EventsActions Name="SHHideBlanket" Description="Silver hair se cache sous les couettes">
+    <EventActionPrecondition PreconditionStateConnection="//@States.7" Consumed="false"/>
+    <EventActionPrecondition PreconditionStateConnection="//@States.30" Consumed="false"/>
+    <EventActionPrecondition PreconditionStateConnection="//@States.32"/>
+    <EventActionEffect EffectStateConnection="//@States.37"/>
+  </EventsActions>
+</scenario:Scenario>

@@ -32,7 +32,6 @@ public class NormalMarking extends Marking {
 
 	public void removeToken(int nombre) {
 		for (int i = 0; i < nombre; i++) {
-			// CHANGEMENTS A FAIRE ICI HEIN TU M'ECOUTES?
 			tokens.remove(i);
 		}
 	}

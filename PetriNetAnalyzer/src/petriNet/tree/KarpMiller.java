@@ -43,21 +43,14 @@ public class KarpMiller {
 		}
 
 		while (!wait.isEmpty()) {
-			/*
-			 * System.out.println(wait.size() + " : "); for (NodeTransitionAssociation nta :
-			 * wait) { System.out.println(nta.getTransition().getEventAction().getName() +
-			 * "\n"); }
-			 */
 
 			System.out.println(wait.size());
 			NodeTransitionAssociation toVisit = wait.get(0);
 
 			wait.remove(0);
 
-			// System.out.println(toVisit.getNode().getMarking());
 			if (activeNodes.contains(toVisit.getNode())) {
 				PetriNetMarking pnm = toVisit.getTransition().fire(toVisit.getNode().getMarking());
-				// System.out.println(" \n\n\n" + pnm);
 				Node currentNode = toVisit.getNode();
 
 				// Get active ancestors
@@ -104,15 +97,6 @@ public class KarpMiller {
 
 					activeNodes.add(newNode);
 					
-					/*
-					 * ArrayList<Transition> transitionsPast = new ArrayList<Transition>();
-					 * 
-					 * for (Node n : newNode.getAncestors()) { for (Relation rel :
-					 * tree.getRelations()) { if (n.equals(rel.getSource())) {
-					 * transitionsPast.add(rel.getTransition());
-					 * System.out.println(rel.getTransition().getEventAction().getName() +
-					 * "\n\n\n"); } } }
-					 */
 
 					ArrayList<Node> nodesToVisit = new ArrayList<Node>();
 					nodesToVisit.addAll(newNode.getAncestors());
@@ -120,7 +104,7 @@ public class KarpMiller {
 					ArrayList<EventAction> usedActions = new ArrayList<EventAction>();
 					Choice c = null;
 					for (Node node : nodesToVisit) {
-						//System.out.println(PetriNet.getScenario());
+
 						if(node.getParent()!=null)
 						{
 							usedActions.add(tree.getTransition(node.getParent(), node).getEventAction());
@@ -155,8 +139,6 @@ public class KarpMiller {
 
 		PetriNetMarking newMarking = new PetriNetMarking(pnm);
 
-		// ArrayList<Place> toOmega = new ArrayList<Place>();
-
 		for (PetriNetMarking marking : markings) {
 			isInferior = marking.isInferior(pnm);
 			if (isInferior) {
@@ -169,16 +151,7 @@ public class KarpMiller {
 				}
 			}
 		}
-		/*
-		 * if (isInferior) {
-		 * 
-		 * for (PetriNetMarking marking : markings) { for (Place p :
-		 * marking.getPNMarking().keySet()) { if (pnm.getPNMarking().get(p) instanceof
-		 * NormalMarking) { OmegaMarking om = new
-		 * OmegaMarking(pnm.getPNMarking().get(p).getMinTime(),
-		 * pnm.getPNMarking().get(p).getMaxTime()); newMarking.getPNMarking().replace(p,
-		 * om); } } } }
-		 */
+
 		return newMarking;
 	}
 
